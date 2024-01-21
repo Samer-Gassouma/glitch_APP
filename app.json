@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "pog101",
-    "slug": "pog101",
+    "slug": "glitch",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +15,35 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ivan.glitch"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ivan552.glitch"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d2ffb4b1-655c-4751-bb01-452ab963e37b"
+      }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photo",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "filePermission": "Allow $(PRODUCT_NAME) to access your files"
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "owner": "ivan552"
   }
 }
